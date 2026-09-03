@@ -8,7 +8,7 @@
   :root { color-scheme: light dark; }
   body {
     margin: 0; min-height: 100vh;
-    display: grid; place-items: start center;
+    display: grid; place-items: start center; gap: 20px;
     font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
     background: #f4f6f8; color: #1a2027;
     padding: 24px;
@@ -24,7 +24,7 @@
     box-shadow: 0 10px 30px -18px rgba(0,0,0,.3);
     box-sizing: border-box;
   }
-  h1 { font-size: 24px; margin: 0 0 12px; }
+  h1, h2 { font-size: 24px; margin: 0 0 12px; }
   p { margin: 0 0 14px; line-height: 1.55; }
   .espacio-formulario {
     margin-top: 22px;
@@ -43,6 +43,22 @@
     <p>Un espacio para que cualquier persona de esta área deje sus sugerencias, comentarios o ideas.</p>
     <div class="espacio-formulario">
       Aquí va a ir el formulario para dejar una sugerencia.
+    </div>
+  </div>
+
+  <div class="caja">
+    <h2>Propuestas para lugares de cena navideña</h2>
+    <p>Un espacio para proponer dónde hacer la cena navideña este año.</p>
+    <div class="espacio-formulario">
+      Aquí va a ir el formulario para dejar tu propuesta.
+    </div>
+  </div>
+
+  <div class="caja">
+    <h2>Sugerencias de cenas</h2>
+    <p>Un espacio para proponer ideas de menú para la cena navideña.</p>
+    <div class="espacio-formulario">
+      Aquí va a ir el formulario para dejar tu sugerencia.
     </div>
   </div>
 </body>
