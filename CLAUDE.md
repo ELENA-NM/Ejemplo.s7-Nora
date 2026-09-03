@@ -25,10 +25,16 @@ sale de esa tabla o de lo que la persona escriba en el formulario.
 - Antes de un cambio grande, dame el plan por escrito y espera mi visto bueno.
 - Un cambio a la vez. Enséñame qué cambió antes de escribirlo.
 - Trabaja siempre en una rama, nunca directo sobre `main`.
-- No publiques a producción sin que yo lo pida: fusionar es una decisión mía.
-- **Si tienes acceso a mi base de datos, enséñame el SQL antes de correrlo y espera mi
-  respuesta.** Crear o borrar tablas, agregar o quitar columnas y cambiar permisos no se
-  deshacen con una rama: en cuanto corren, ya está.
+- **Cualquier cambio que se haga en cualquier rama se publica solo:** en cuanto
+  quede listo, pide el pull, haz merge a `main`, y despliega todo a producción
+  — tanto el sitio en Netlify como los cambios de Supabase. No hace falta que yo
+  diga "haz pull y despliegue" cada vez; esto aplica siempre, automáticamente,
+  para todas las ramas de aquí en adelante.
+- **Excepción: si tienes acceso a mi base de datos, enséñame el SQL antes de
+  correrlo y espera mi respuesta.** Crear o borrar tablas, agregar o quitar
+  columnas y cambiar permisos no se deshacen con una rama: en cuanto corren, ya
+  está. Esta parte del despliegue sigue esperando mi aprobación aunque el resto
+  ya no la espere.
 
 ## 4. Lo que nunca debes hacer
 
@@ -41,9 +47,11 @@ sale de esa tabla o de lo que la persona escriba en el formulario.
 
 ## 5. Mi regla de verificación
 
-Cuando digo **"haz pull y despliegue"**, es la señal de que apruebo el cambio:
-traes lo último de la rama y publicas. Antes de decirlo reviso yo el Pull
-Request; tú no publicas sin que yo lo diga primero.
+Ya no hace falta que yo diga una frase para aprobar un despliegue: cada cambio
+se fusiona a `main` y se publica solo en cuanto queda listo en su rama (salvo
+el SQL de la base de datos, que sigue esperando mi respuesta — ver sección 3).
+Lo que reviso yo es después: que la página y los datos se vean bien tras cada
+despliegue. Si algo sale mal, lo digo y se corrige en la siguiente rama.
 
 ## 6. Cómo vuelvo a abrir esto
 
