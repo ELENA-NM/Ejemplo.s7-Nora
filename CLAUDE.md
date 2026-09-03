@@ -8,8 +8,9 @@ primer minuto.
 
 ## 1. Qué es este proyecto y quién lo usa
 
-*(Lo escribes tú en la sesión: dos líneas. Qué es la página, para quién es y cada
-cuándo se usa.)*
+Es el buzón de sugerencias del área, y ahora también el espacio para organizar la
+cena navideña: proponer lugar y proponer menú. La usa cualquier persona del área,
+sobre todo en las semanas antes de la cena.
 
 ## 2. De dónde sale cada cifra
 
@@ -40,16 +41,41 @@ sale de esa tabla o de lo que la persona escriba en el formulario.
 
 ## 5. Mi regla de verificación
 
-*(La escribes tú en la sesión: con qué frase cierras lo que entregas y qué tiene
-que ser cierto para que puedas publicarlo.)*
+Cuando digo **"haz pull y despliegue"**, es la señal de que apruebo el cambio:
+traes lo último de la rama y publicas. Antes de decirlo reviso yo el Pull
+Request; tú no publicas sin que yo lo diga primero.
 
 ## 6. Cómo vuelvo a abrir esto
 
-- El proyecto vive en este repositorio de GitHub.
+- El proyecto vive en este repositorio de GitHub (`ELENA-NM/Ejemplo.s7-Nora`).
 - Se abre pidiéndole a Claude una sesión sobre este repo; no hace falta descargarlo.
-- La página publicada está en la liga que da Netlify.
-- La base de datos está en supabase.com, en el proyecto de esta cuenta.
+- **La página todavía no tiene una liga pública funcionando.** Existe un sitio en
+  Netlify (`ejemplo-s7-nora`), pero no está conectado a este repositorio y no
+  tiene ningún despliegue exitoso todavía. Falta entrar a
+  https://app.netlify.com/projects/ejemplo-s7-nora → "Link repository" → conectar
+  este repo → rama `main`, para que quede con publicación automática.
+- La base de datos está en supabase.com, en el proyecto **`curso-claude`** de esta
+  cuenta.
 
 > **Si la página deja de mostrar datos después de una semana sin usarla**, casi
 > siempre es que el proyecto gratuito de Supabase se pausó. Se despierta con el
 > botón **Resume project**.
+
+## 7. Sistema de diseño
+
+**Colores**
+
+| Color | Uso |
+|---|---|
+| Azul — `#2563EB` | Color principal: encabezados, botones, enlaces |
+| Verde — `#16A34A` | Confirmaciones, mensajes de éxito |
+| Amarillo — `#F5B301` | Avisos, resaltados |
+
+**Tipografía**
+
+Calibri. Como es una fuente de Windows/Office y no viene instalada en todos los
+navegadores, se usa con una pila de respaldo:
+
+```css
+font-family: Calibri, Candara, "Segoe UI", Optima, Arial, sans-serif;
+```
